@@ -1,0 +1,6 @@
+import os
+target = input ("Target: ")
+save_file = target
+subfinder = os.system(f"subfinder -d {target} -o {target}")
+httpx = os.system(f"httpx -l {target} -o {target}")
+nuclei = os.system(f"nuclei -l {target} -s medium, high, critical, unknown -ept ssl -o {target}")
